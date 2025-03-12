@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'product_view_screen.dart';
 
 class ProductsScreen extends StatelessWidget {
   const ProductsScreen({super.key});
@@ -63,7 +64,12 @@ class ProductsScreen extends StatelessWidget {
                 width: 300,
                 child: ElevatedButton(
                   onPressed: () {
-                    print("hey product");
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const ProductViewScreen(),
+                      ),
+                    );
                   },
                   style: ElevatedButton.styleFrom(
                     backgroundColor: const Color.fromARGB(255, 247, 159, 26),
