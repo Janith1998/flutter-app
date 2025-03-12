@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'products_screen.dart';
 import 'weather_screen.dart';
+import 'splash_screen.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
