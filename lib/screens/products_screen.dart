@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'product_view_screen.dart';
+import 'package:app/components/custom_app_bar.dart';
 
 class ProductsScreen extends StatelessWidget {
   const ProductsScreen({super.key});
@@ -7,19 +8,14 @@ class ProductsScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text('Products'),
+      appBar: CustomAppBar(
+        title: 'Products',
         actions: [
           Padding(
             padding: const EdgeInsets.only(right: 40.0),
-            child: GestureDetector(
-              onTap: () {
-                print('go to profile');
-              },
-              child: const CircleAvatar(
-                radius: 20,
-                backgroundImage: AssetImage("assets/images/user.png"),
-              ),
+            child: Icon(
+              Icons.shopping_cart,
+              color: const Color.fromARGB(255, 235, 102, 7),
             ),
           ),
         ],
